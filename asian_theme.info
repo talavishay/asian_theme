@@ -1,0 +1,21 @@
+name = asian_theme
+description = halely elzar design -- implemented by Reut & Avishay
+core = 7.x
+
+
+scripts[] = asian_theme.js
+
+stylesheets[all][] = layout.css
+
+stylesheets[all][] = style.css
+
+
+
+regions[top]  = top
+
+regions[left]  = left 50% col 
+regions[right]  = right 50% col 
+
+regions[main]  = main content 
+
+regions[footer]  = footer
