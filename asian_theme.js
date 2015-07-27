@@ -2,10 +2,7 @@
 jQuery(document).ready(function(){
 
 	// newsletter popup
-	
-	
-
-
+ 
 	// front -teaser view -- created field
 	// split text and wrap 
 	jQuery(".views-field-created .wrap >div ").each(function(i, val){
@@ -52,7 +49,10 @@ jQuery(document).ready(function(){
 			.prepend( jump_menu.clone(true) )
 			.prepend( scroll_to_top.clone(true) );
 	});
-	var h = '<div class="sprite_wrap" id="join"><div data-menu_item="mailinglist" data-text="_top" class="sprite mailinglist_top "></div><div class="label">Join our mailing list</div></div>';
+	var h = jQuery('<div class="sprite_wrap" id="join"><div data-menu_item="mailinglist" data-text="_top" class="sprite mailinglist_top "></div><div class="label">Join our mailing list</div></div>').on("click", function(){
+		_popup();
+	});
+	
 	jQuery("#header .region")
 		.prepend( get_menu(menu_items, '_top') )
 		.find(".menu_wrap > .menu").append(h);
@@ -83,9 +83,10 @@ jQuery(document).ready(function(){
 			.on("click", function(e){
 				var nid = jQuery(e.currentTarget).data("nid");
 					//console.log();
+					if(typeof nid != "undefined"){
 				_scroll('.view-frontpage .nid-'+nid);
 				console.log('.view-frontpage .nid-'+nid);
-			
+			}
 			});
 			
 			
@@ -147,6 +148,12 @@ function _scroll(selector){
 
 function _popup(){
 		
-		jQuery('<div/>').html('XXXX').dialog()
+		jQuery('<div/>').html('<label>Email</label><input  type="text"/><input value="Send" type="submit"/>').dialog({
+			"open" : function(d){
+				console.log(d.target);
+				var p = jQuery(d.target).parents('.ui-dialog');
+				jQuery('.ui-dialog-titlebar', p).remove();
+			}	
+		});
 		
 }

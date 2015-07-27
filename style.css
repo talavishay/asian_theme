@@ -51,6 +51,9 @@ a{
   text-align: right !important;;
   
 }
+#block-webform-client-block-11{
+display:none;
+}
 
 /* CONTACT*/
 .sprite-contact.views-row {
