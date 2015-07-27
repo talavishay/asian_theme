@@ -54,22 +54,20 @@ a{
 
 /* CONTACT*/
 .sprite-contact.views-row {
-  border-bottom: 1px dashed #000;
-
-  background-image : url(images/contact_bg.png);
-  background-position: 0 310px;
-  background-repeat: no-repeat;
-  min-height: 1090px !important;;
-  width: 880px;
-
-  padding: 0px !important;;
+ border-bottom: 1px dashed #000;
+background-image: url("images/contact_bg.png");
+background-position: 0px 220px;
+background-repeat: no-repeat;
+min-height: 1006px !important;
+width: 880px;
+padding: 0px !important;
 }
 .sprite-contact > .{
   padding-left:100px
 }
 .sprite-contact.views-row >.views-field-webform-form-body{
   width: 470px;
-  margin-top: 155px;
+  margin-top: 95px;
   margin-left: 235px;
 }
 /* .form-item, .form-actions{
