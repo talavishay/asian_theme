@@ -1,11 +1,11 @@
 
 jQuery(document).ready(function(){
 
+	// newsletter popup
+	
+	
 
-	//add red * to required form items
-	
-	jQuery('input.required').after('<span class="astrix">*</span>');
-	
+
 	// front -teaser view -- created field
 	// split text and wrap 
 	jQuery(".views-field-created .wrap >div ").each(function(i, val){
@@ -142,4 +142,11 @@ function _scroll(selector){
 	jQuery('html,body').animate({
         scrollTop: jQuery(selector).offset().top - 30
     }, 1000);
+}
+
+
+function _popup(){
+		
+		jQuery('<div/>').html('XXXX').dialog()
+		
 }

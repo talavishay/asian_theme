@@ -52,8 +52,9 @@ html{
 #page >.col_2_wrap{
   padding-left: 25px
 }
-#page > #main-wrapper{
-  padding: 0px 20px
+.view-frontpage.view-display-id-page h2,
+.view-frontpage.view-display-id-page .views-field{
+  padding: 10px 20px 0;
 }
 
 #content {

@@ -7,6 +7,7 @@ line-height: 1.25em;
 text-align: left;
   letter-spacing: .04em;
   word-spacing: 0em;
+  
 }
 body{
 /* Inline Style */
@@ -29,21 +30,39 @@ a{
 }
 
 /* typo -- END*/
+/* SOCIAL LINKS BLOCK - block-block-4 */ 
 
+.region-top #block-block-4{
+  position: absolute;  
+  top:56px;
+  left: 30px
+}
+.region-top{
+  position: relative;  
+}
+.region-top:hover #block-block-4 .contextual-links-wrapper >.contextual-links-trigger {
+  position: relative;
+  z-index: 9999;
+  display: block ;
+  
+}
+#block-block-5 p{
+  padding: 20px;
+  text-align: right !important;;
+  
+}
 
 /* CONTACT*/
-.sprite-contact.views-row:after {
+.sprite-contact.views-row {
+  border-bottom: 1px dashed #000;
+
   background-image : url(images/contact_bg.png);
-  background-position: 0 300px;
+  background-position: 0 310px;
   background-repeat: no-repeat;
-  height: 100%;
+  min-height: 1090px !important;;
   width: 880px;
-    content:".";
-  display: block;
-  position: absolute;
-  top:0px;
-  left: -20px;
-  z-index: 0;
+
+  padding: 0px !important;;
 }
 .sprite-contact > .{
   padding-left:100px
@@ -53,9 +72,9 @@ a{
   margin-top: 155px;
   margin-left: 235px;
 }
-.form-item, .form-actions{
+/* .form-item, .form-actions{
   margin: 0px auto 10px;
-}
+} */
 .sprite-contact.views-row select{
    appearance :none;
   -moz-appearance:none;
@@ -108,33 +127,65 @@ font-size: 1.8em !important;
   opacity: 1;
   text-transform: capitalize;
 }
-input.required:before{
-  content: "*";
-  color: red;
-  font-size: 200px;
-  position: relative;
-  z-index: 10;
-  display: relative;
-}
 .sprite-contact.views-row >.views-field-webform-form-body select,
 .sprite-contact.views-row >.views-field-webform-form-body textarea,
 .sprite-contact.views-row >.views-field-webform-form-body input{
+  padding: 2px 10px 1px ;
+  width: 100%;
+  border: 0px solid white;
+  background-color: transparent;
+}
+
+.mailinglist{
+  font-family: HelveticaNeue;
+color: #ffffff;
+font-size: 1.575em; /* Approximation due to font substitution */
+font-weight: 400;
+text-align: left;
+text-shadow: 1px 2px 2.19px  black;
+ width:auto !important;; 
+  padding-left: 56px;
+  padding-top: 15px;
+  vertical-align: middle;
+  display: table-cell;
+}
+.sprite-contact.views-row >.views-field-webform-form-body .webform-component-select,
+.sprite-contact.views-row >.views-field-webform-form-body .webform-component-textfield,
+.sprite-contact.views-row >.views-field-webform-form-body .webform-component-email,
+.sprite-contact.views-row >.views-field-webform-form-body .webform-component-textarea,
+.sprite-contact.views-row >.views-field-webform-form-body .webform-component-textfield{
   border: 1.5px solid black;
   border-radius: 4px;
   color: black;
-  padding: 4px 10px 1px !important;;
+  background-color: rgba(255,255,255,.8);
 }
-.sprite-contact.views-row >.views-field-webform-form-body input{
-  width : 400px; 
- }
-.sprite-contact textarea{
+.sprite-contact.views-row >.views-field-webform-form-body .webform-component-select,
+.sprite-contact.views-row >.views-field-webform-form-body .webform-component-textfield,
+.sprite-contact.views-row >.views-field-webform-form-body .webform-component-email{
+  width : 400px ;
+}
+
+.required{
+  background-image: url('images/sprite.png') ;
+  background-position:367px -1780px;
+  background-repeat: no-repeat;
+  display: block;
+}
+.required.form-select{
+  background-image: url('images/sprite.png'), url('images/sprite.png') ;
+  background-position:367px -1780px, 352px -1738px;
+  
+  
+}
+.sprite-contact.views-row >.views-field-webform-form-body .webform-component-textarea{
   width : 475px;
   height : 180px;
-
-
+}
+.sprite-contact textarea{
+  max-width:100%;
 }
 
-.sprite-contact.views-row >h2,
+.sprite-contact.views-row > h2,
 .sprite-contact.views-row > .views-field-body,
 .sprite-contact.views-row >.views-field-webform-form-body{
   position:relative;
@@ -148,7 +199,7 @@ display:none;
   
 }
 .sprite-contact.views-row > .views-field-body {
-  padding: 5px 0;
+/*   padding: 5px 0; */
   font-size : 1.125em;
   color: white;
 }
@@ -166,7 +217,7 @@ display:none;
   display: block;
   position: absolute;
   top:0px;
-  left: -20px;
+  left: -0px;
   z-index: 0;
   background-color: black;
   background-image: url(images/send.png);
@@ -176,25 +227,47 @@ display:none;
 }
 .sprite-contact .webform-component{
   position: relative;
-  
+ 
 }
-.sprite-contact .webform-component .astrix{
-  position: absolute; 
-  right: 0px;
-/*   top: 0px; */
-  z-index: 9;
-  width: 10px;
-  height: 10px;
-  background: red;
-  display: block ;
-  
+.sprite-contact .form-actions{
+  text-align: right;
 }
-
-.sprite-contact input{
-  /* min-width: 100%; */
-/*   padding: 10px; */
+.sprite-contact .webform-submit:hover{
+  background-position: 0 -1373px;
 }
-
+.sprite-contact .webform-submit{
+  background: url('images/sprite.png') no-repeat top left; 
+   background-position: 0 -1314px;
+  width: 137px !important;;
+  height: 49px; 
+  text-indent: -9999px;
+}
+.sprite-contact .webform-submit:hover{
+/* .sprite.submit_on { background-position: 0 -1373px; width: 137px; height: 49px; }    */
+}
+.sprite-contact .webform-component-markup .mailinglist{
+  background-color : white;
+  border-radius : 50%;
+border: 2px solid black;  
+  height:35px !important;
+  display: block;
+  float: left;
+}
+.label{
+  display:block !important;
+}
+.sprite-contact .mailinglist_wrap{
+  font-family: HelveticaNeue;
+color: #ffffff;
+font-size: 1.375em; /* Approximation due to font substitution */
+font-weight: 400;
+text-align: left;
+text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
+  line-height: 50px;
+  text-indent:  10px;
+  float: left;
+  min-width: 260px
+}
 /* CONTACT   -- END*/
 
 
@@ -225,11 +298,16 @@ color:#000000;
   background-color: white;
 }
 #header{
-  box-shadow: 0px 3px 10px 0px black;
+  box-shadow: 0px -6px 20px 12px #000;
 /*   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75); */
   margin-bottom: 5px;
-  border-bottom: 1px solid black
-
+  position: relative;
+  z-index: 1;
+  
+}
+.col_2_wrap{
+  position: relative;
+  z-index: 0;
 }
 .scroll_to_top {
     position: absolute;
@@ -289,6 +367,14 @@ width: 46%;
   margin-left: 25px;
   float: right;
 }
+#header .menu .contact_top{
+  position: relative;
+  top: -10px;
+  vertical-align: top;
+}
+#logos #haifa{
+  margin-top: 4px
+}
 #block-block-3 img{
 /*   min-width: 880px; */
   width: 100%;
@@ -317,9 +403,12 @@ width: 46%;
 } */
 .view-frontpage.view-display-id-page .menu_wrap{
   position: absolute;
-  right: -20px;
+  right: 20px;
   overflow: hidden;
 /*   display: inline-block; */
+}
+.view-frontpage.view-display-id-page .menu_wrap>.menu .label{
+  display: none !important;;
 }
 .view-frontpage.view-display-id-page .menu{
   transition-duration: 1s;
@@ -330,8 +419,8 @@ width: 46%;
 /*   width: 100%; */
 /*   display: inline-block; */
 /*   height: 20px; */
-  top: -30px;
-  padding: 10px 10px 5px ;
+  top: -40px;
+  padding: 10px 10px 0px ;
 }
 
 .view-frontpage.view-display-id-page .views-row:hover .menu{
@@ -347,14 +436,10 @@ width: 46%;
   min-height: 85px;
   padding-bottom: 30px;
 }
-.view-frontpage.view-display-id-page .views-row:before{
-  content : ".";
-  display: block;
-  /* width: 880px; */
-  margin-left: -25px;
+.view-frontpage.view-display-id-page .views-row{
   border-top:  1px dashed black;
   box-shadow: inset 0px  9px  5px -5px  gray;
-  position : absolute;
+  
 }
 .view-frontpage.view-display-id-page .views-field-title{
   display: inline-block;
@@ -403,6 +488,7 @@ padding-top: 20px
 .sprite.googlep { background-position: 0 -560px; width: 31px; height: 34px; } 
 .sprite.ip_on { background-position: 0 -604px; width: 54px; } 
 .sprite.mailinglist_top { background-position: 0 -662px; } 
+.sprite.mailinglist { background-position: 0 -662px; } 
 .sprite.mailinglist_top_on { background-position: 0 -720px; } 
 .sprite.morinfo { background-position: 0 -778px; width: 60px; height: 38px; } 
 .sprite.Requirements_top { background-position: 0 -826px; } 
@@ -417,8 +503,8 @@ padding-top: 20px
 .sprite.submit_on { background-position: 0 -1373px; width: 137px; height: 49px; } 
 .sprite.twit { background-position: 0 -1432px; width: 31px; height: 34px; } 
 .sprite.send { background-position: 0 -1476px; width: 197px; height: 198px; } 
-.sprite.up { background-position: 0 -1684px; width: 54px; } 
-
+.sprite.up { background-position:0px -1686px; width: 54px; } 
+.sprite.up:hover { background-position: 0 -604px; width: 54px; width: 54px; } 
 
 
 /* .view-front-page-teaser */
