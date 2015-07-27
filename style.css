@@ -45,27 +45,42 @@ a{
   left: -20px;
   z-index: 0;
 }
+.sprite-contact > .{
+  padding-left:100px
+}
 .sprite-contact.views-row >.views-field-webform-form-body{
-  width:510px;
-  margin:155px 0px 0px 165px;
-  padding-left: 80px;    
+  width: 470px;
+  margin-top: 155px;
+  margin-left: 235px;
 }
 .form-item, .form-actions{
   margin: 0px auto 10px;
 }
-
+.sprite-contact.views-row select{
+   appearance :none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+   width : 412px;
+  border : 1px solid black;
+}
 .sprite-contact.views-row  textarea,
 .sprite-contact.views-row select,
 .sprite-contact.views-row input{
 font-size: 1.8em !important;
 /*   font-size: 28px !important; */
   
-padding:0em .5em .3em;
+/* padding:0em .5em .1em !important;; */
 }
 .sprite-contact.views-row  textarea{
   padding: .5em .3em;
   font-size: 2.2em !important;
   height:8em;
+}
+.sprite-contact.views-row select:focus option:first-child{
+  display: none;
+}
+.sprite-contact.views-row select{
+  text-indent: -2.8px;
 }
 .sprite-contact .grippie{
   display: none;
@@ -101,18 +116,24 @@ input.required:before{
   z-index: 10;
   display: relative;
 }
+.sprite-contact.views-row >.views-field-webform-form-body select,
+.sprite-contact.views-row >.views-field-webform-form-body textarea,
 .sprite-contact.views-row >.views-field-webform-form-body input{
-  
-  
-  border-color: black !important;;
   border: 1.5px solid black;
   border-radius: 4px;
   color: black;
-  
-
-  /* line-height: 0em; */
-  
+  padding: 4px 10px 1px !important;;
 }
+.sprite-contact.views-row >.views-field-webform-form-body input{
+  width : 400px; 
+ }
+.sprite-contact textarea{
+  width : 475px;
+  height : 180px;
+
+
+}
+
 .sprite-contact.views-row >h2,
 .sprite-contact.views-row > .views-field-body,
 .sprite-contact.views-row >.views-field-webform-form-body{
@@ -290,11 +311,7 @@ width: 46%;
 .view-frontpage.view-display-id-page .views-row{
   position: relative;
 }
-.view-frontpage.view-display-id-page .views-row span{
 
-  background:red;
-  
-}
 /* .view-frontpage.view-display-id-page .menu_wrap{
   
 } */
@@ -321,7 +338,7 @@ width: 46%;
   top: -0px;
 }
 .view-frontpage.view-display-id-page .views-field{
-/*   background: white; */
+/* background: white; */
 /*   position: relative; */
 /*   z-index: 1; */
 }
@@ -333,7 +350,7 @@ width: 46%;
 .view-frontpage.view-display-id-page .views-row:before{
   content : ".";
   display: block;
-  width: 880px;
+  /* width: 880px; */
   margin-left: -25px;
   border-top:  1px dashed black;
   box-shadow: inset 0px  9px  5px -5px  gray;
