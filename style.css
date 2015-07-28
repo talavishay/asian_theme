@@ -328,6 +328,9 @@ color:#000000;
     bottom: 10px;
     background: red;
 }
+#header .menu{
+  text-align: right;
+}
 #header .menu_wrap{
 /* #block-block-3{ */
   box-shadow: 0px -3px 30px 10px black;
