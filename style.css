@@ -212,7 +212,7 @@ text-shadow: 1px 2px 2.19px  black;
   filter: invert(20%);
 }
 .sprite-contact.views-row > .views-field-body {
-/*   padding: 5px 0; */
+padding: 3% 20px;
   font-size : 1.125em;
   color: white;
 }
