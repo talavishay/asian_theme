@@ -1,28 +1,25 @@
 
 jQuery(document).ready(function(){
-
-	// newsletter popup
- 
-	// front -teaser view -- created field
-	// split text and wrap 
+	
+	//change html markup -- split text and wrap 
+	// front-teaser view -- created date field
 	jQuery(".views-field-created .wrap >div ").each(function(i, val){
 		var val = jQuery(val),
 			split = val.text().split(' ');
 		val.html('<div class="numbers">'+split[0]+'</div><div class="text">'+split[1]+'</div>');
-		
 	});
-	// title break
 	
+	// title break on '\n'
 	jQuery('.block > h2, .block-title').each(function(i, val){
 		var text = jQuery(val).text().split('\\n');
 		jQuery(val).html(text[0] + "<br/>" + text[1]);
 		console.log(text);
 	});
 
-
-	//menu
-	var menu_items = [],
-		rows = jQuery('.view-frontpage .views-row');
+	// JUMP MENU
+	
+	var menu_items = [],// menu links to create
+		rows = jQuery('.view-frontpage .views-row');//anchor targets
 	
 	rows.each(function(i, val){ 
 		var _class = jQuery(val).attr('class'),
@@ -30,10 +27,8 @@ jQuery(document).ready(function(){
 			nid = _class.split('nid-')[1].split(' ')[0];
 			
 		if ( sprite != '' && sprite != ' '  ){
-				menu_items.push({
-					"sprite_name" : sprite,
-					"nid" : nid
-				});
+			menu_items.push({	"sprite_name" 	: sprite,
+								"nid" 			: nid});
 		}
 	});
 	
@@ -45,17 +40,24 @@ jQuery(document).ready(function(){
 	
 	jQuery(rows).each(function(i, val ){
 		jQuery(val)
-			.wrapAll( '<span/>' )
 			.prepend( jump_menu.clone(true) )
 			.prepend( scroll_to_top.clone(true) );
 	});
-	var h = jQuery('<div class="sprite_wrap" id="join"><div data-menu_item="mailinglist" data-text="_top" class="sprite mailinglist_top "></div><div class="label">Join our mailing list</div></div>').on("click", function(){
+	var h = '<div class="sprite_wrap" id="join"><div data-menu_item="mailinglist" data-text="_top" class="sprite mailinglist_top "></div><div class="label">Join our mailing list</div></div>',
+		_top_menu = get_menu(menu_items, '_top');
+		
+	jQuery("#header .region")
+		.prepend( jQuery(".menu", _top_menu).append(h) );
+		
+	jQuery("#join, .webform-component--new-markup").on("click", function(){
 		_popup();
 	});
 	
-	jQuery("#header .region")
-		.prepend( get_menu(menu_items, '_top') )
-		.find(".menu_wrap > .menu").append(h);
+	// move title 
+	var cont = jQuery(".sprite-contact");
+	jQuery(".views-field-body", cont).after(jQuery("h2",cont));
+	
+	
 	
 //console.log(menu_markup.html());
 
@@ -83,10 +85,9 @@ jQuery(document).ready(function(){
 			.on("click", function(e){
 				var nid = jQuery(e.currentTarget).data("nid");
 					//console.log();
-					if(typeof nid != "undefined"){
-				_scroll('.view-frontpage .nid-'+nid);
-				console.log('.view-frontpage .nid-'+nid);
-			}
+				if(typeof nid != "undefined"){
+					_scroll('.view-frontpage .nid-'+nid);
+				}
 			});
 			
 			
@@ -149,9 +150,12 @@ function _scroll(selector){
 function _popup(){
 		
 		jQuery('<div/>').html('<label>Email</label><input  type="text"/><input value="Send" type="submit"/>').dialog({
+			"modal" : true,
+			"resizable" : false,
+			"draggable" : false,
 			"open" : function(d){
-				console.log(d.target);
 				var p = jQuery(d.target).parents('.ui-dialog');
+				jQuery(d.target).prepend(jQuery('.ui-dialog-titlebar .ui-button', p));
 				jQuery('.ui-dialog-titlebar', p).remove();
 			}	
 		});
