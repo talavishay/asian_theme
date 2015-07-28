@@ -35,6 +35,10 @@ a{
 .region-footer {
   min-height:50px;
 }
+.region-footer{
+  background-color: black;
+  color: white;
+}
 .region-footer .block{
   display: inline-block;
   float: right;
@@ -289,9 +293,9 @@ body.html:not(.cke_show_borders){
   background-color: #322c2c;
 }
 .view-front-page-teaser .views-field-body{
-  font-size: .9em;
-font-weight: 400;
-letter-spacing: 0.03em;
+  font-size: 1em;
+/* font-weight: 400; */
+/* letter-spacing: 0.03em; */
 line-height: 1.5em;
 }
 tbody{
@@ -532,6 +536,7 @@ li.sprite.bullet {
     width: 100%;
     min-height: 18px !important;;
    height: auto !important;;
+  margin-bottom: 10px;
 }
 /* .view-front-page-teaser */
 
