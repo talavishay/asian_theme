@@ -45,9 +45,9 @@ jQuery(document).ready(function(){
 	});
 	var h = '<div class="sprite_wrap" id="join"><div data-menu_item="mailinglist" data-text="_top" class="sprite mailinglist_top "></div><div class="label">Join our mailing list</div></div>',
 		_top_menu = get_menu(menu_items, '_top');
-		
+		jQuery(".menu", _top_menu).append(h);
 	jQuery("#header .region")
-		.prepend( jQuery(".menu", _top_menu).append(h) );
+		.prepend(   _top_menu);
 		
 	jQuery("#join, .webform-component--new-markup").on("click", function(){
 		_popup();
