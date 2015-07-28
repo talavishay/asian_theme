@@ -522,6 +522,9 @@ padding-top: 20px
 .sprite.up { background-position:0px -1686px; width: 54px; } 
 .sprite.up:hover { background-position: 0 -604px; width: 54px; width: 54px; } 
 
+p.sprite{
+min-width:90%;
+}
 
 
 li.sprite.bullet {
