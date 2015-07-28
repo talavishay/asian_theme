@@ -25,7 +25,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             },
             {
                     name : 'morinfo',
-                    element : 'li',
+                    element : 'p',
                     attributes :
                     {
                             style : 'padding-left: 60px; ',
