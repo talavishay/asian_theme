@@ -183,13 +183,13 @@ text-shadow: 1px 2px 2.19px  black;
 }
 
 .required{
-  background-image: url('images/sprite.png') ;
+  background-image: url('images/sprites.png') ;
   background-position:367px -1780px;
   background-repeat: no-repeat;
   display: block;
 }
 .required.form-select{
-  background-image: url('images/sprite.png'), url('images/sprite.png') ;
+  background-image: url('images/sprites.png'), url('images/sprites.png') ;
   background-position:367px -1780px, 352px -1738px;
   
   
@@ -249,7 +249,7 @@ text-shadow: 1px 2px 2.19px  black;
   background-position: 0 -1373px;
 }
 .sprite-contact .webform-submit{
-  background: url('images/sprite.png') no-repeat top left; 
+  background: url('images/sprites.png') no-repeat top left; 
    background-position: 0 -1314px;
   width: 137px !important;;
   height: 49px; 
@@ -483,7 +483,7 @@ padding-top: 20px
   z-index: 9;
 }
 .sprite { 
-  background: url('images/sprite.png') no-repeat top left; 
+  background: url('images/sprites.png') no-repeat top left; 
   width: 47px; 
   height: 47px;
   display: inline-block;
